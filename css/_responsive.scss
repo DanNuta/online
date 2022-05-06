@@ -1,0 +1,40 @@
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$desktopExtraLarge: 1200px;
+$desktopExtraExtraLargeX: 1400px;
+
+@mixin desktopExtraLarge{
+    @media (max-width: $desktopExtraLarge){
+        @content;
+    }
+}
+
+
+@mixin desktopExtraExtraLarge{
+    @media (max-width: $desktopExtraExtraLargeX){
+        @content;
+    }
+}
+
+
+
+@mixin large{
+    @media (max-width: $large){
+        @content;
+    }
+}
+
+
+@mixin medium{
+    @media (max-width: $medium){
+        @content;
+    }
+}
+
+
+@mixin small{
+    @media (max-width: $small){
+        @content;
+    }
+}

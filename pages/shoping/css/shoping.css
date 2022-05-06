@@ -1,0 +1,489 @@
+.elementAded {
+  width: 100%;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1/13;
+}
+
+.elementAded .element_itself {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 30px 0 30px 0;
+  position: relative;
+  gap: 110px;
+}
+
+@media (max-width: 1200px) {
+  .elementAded .element_itself {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1200px) and (max-width: 992px) {
+  .elementAded .element_itself {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 1200px) and (max-width: 992px) and (max-width: 576px) {
+  .elementAded .element_itself {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    gap: 0;
+  }
+}
+
+.elementAded .element_itself .element_products {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 992px) {
+  .elementAded .element_itself .element_products {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) and (max-width: 576px) {
+  .elementAded .element_itself .element_products {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 100%;
+  }
+}
+
+.elementAded .element_itself .element_products .img_left {
+  background-color: #F8F8F8;
+  margin-right: 20px;
+}
+
+@media (max-width: 1200px) {
+  .elementAded .element_itself .element_products .img_left {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+@media (max-width: 1200px) and (max-width: 992px) {
+  .elementAded .element_itself .element_products .img_left {
+    width: 300px;
+  }
+}
+
+@media (max-width: 1200px) and (max-width: 992px) and (max-width: 768px) {
+  .elementAded .element_itself .element_products .img_left {
+    height: 100%;
+  }
+}
+
+@media (max-width: 1200px) and (max-width: 992px) and (max-width: 768px) and (max-width: 576px) {
+  .elementAded .element_itself .element_products .img_left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 0 10px 0;
+    width: 100%;
+  }
+}
+
+.elementAded .element_itself .element_products .img_left img {
+  width: 220px;
+  height: 220px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+  .elementAded .element_itself .element_products .img_left img {
+    width: 170px;
+    height: 170px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+@media (max-width: 1200px) and (max-width: 992px) {
+  .elementAded .element_itself .element_products .img_left img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1200px) and (max-width: 992px) and (max-width: 576px) {
+  .elementAded .element_itself .element_products .img_left img {
+    width: 50%;
+  }
+}
+
+.elementAded .element_itself .element_products .text_right {
+  text-align: left;
+}
+
+@media (max-width: 992px) {
+  .elementAded .element_itself .element_products .text_right {
+    width: 100%;
+  }
+}
+
+.elementAded .element_itself .element_products .text_right h2 {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 28px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .elementAded .element_itself .element_products .text_right h2 {
+    font-size: 16px;
+  }
+}
+
+.elementAded .element_itself .element_products .text_right p {
+  font-family: Open Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.elementAded .element_itself .element_products .text_right p span {
+  color: red;
+}
+
+.elementAded .element_itself .element_products .text_right p {
+  font-family: Open Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+@media (max-width: 768px) {
+  .elementAded .element_itself .element_products .text_right p {
+    font-size: 12px;
+  }
+}
+
+.elementAded .element_itself .element_products .text_right p h3 {
+  font-family: Open Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 6px;
+}
+
+@media (max-width: 768px) {
+  .elementAded .element_itself .element_products .text_right p h3 {
+    font-size: 14px;
+  }
+}
+
+.elementAded .element_itself .price_total_counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .elementAded .element_itself .price_total_counter {
+    width: 55%;
+  }
+}
+
+@media (max-width: 1200px) and (max-width: 992px) {
+  .elementAded .element_itself .price_total_counter {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1200px) and (max-width: 992px) and (max-width: 576px) {
+  .elementAded .element_itself .price_total_counter {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .elementAded .element_itself .price_total_counter .price {
+    display: none;
+  }
+}
+
+.elementAded .element_itself .price_total_counter .price_total h3 {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .elementAded .element_itself .price_total_counter .price_total h3 {
+    display: block;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 15px 0;
+  }
+}
+
+.elementAded .element_itself .price_total_counter .cancel_products {
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .elementAded .element_itself .price_total_counter .cancel_products {
+    position: absolute;
+    top: -25px;
+    z-index: 999;
+    right: 0px;
+  }
+}
+
+@media (max-width: 992px) and (max-width: 576px) {
+  .elementAded .element_itself .price_total_counter .cancel_products {
+    position: absolute;
+    top: 0px;
+    z-index: 999;
+    right: 0px;
+  }
+}
+
+.elementAded .element_itself .counter h3 {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .elementAded .element_itself .counter h3 {
+    display: block;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 15px 0;
+  }
+}
+
+.elementAded .element_itself .counter .counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.elementAded .element_itself .counter .counter .number_counter {
+  width: 44px;
+  height: 50px;
+  background-color: rgba(39, 39, 39, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.elementAded .element_itself .counter .counter .number_counter h2 {
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 29px;
+  color: #272727;
+  opacity: 0.5;
+}
+
+.elementAded .element_itself .counter .counter .increase_decrease {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.elementAded .element_itself .counter .counter .increase_decrease button {
+  border: none;
+  background-color: rgba(39, 39, 39, 0.1);
+  height: 25px;
+  cursor: pointer;
+}
+
+.center {
+  width: 100%;
+  max-width: 1420px;
+  margin: 0  auto 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+@media (max-width: 1200px) {
+  .center {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+.centru {
+  width: 100%;
+  max-width: 1420px;
+  margin: 115px  auto 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+h1 {
+  margin-bottom: 55px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+}
+
+.shopItems {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1/13;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 576px) {
+  .shopItems {
+    display: none;
+  }
+}
+
+.shopItems .element_header_shop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 85%;
+}
+
+@media (max-width: 1200px) {
+  .shopItems .element_header_shop {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1200px) and (max-width: 992px) {
+  .shopItems .element_header_shop {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) and (max-width: 992px) and (max-width: 576px) {
+  .shopItems .element_header_shop {
+    display: none;
+  }
+}
+
+.shopItems .element_header_shop span:first-of-type {
+  width: 50%;
+}
+
+@media (max-width: 1200px) {
+  .shopItems .element_header_shop span:first-of-type {
+    width: 55%;
+  }
+}
+
+.shopItems .spre_achitare {
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 4;
+  grid-column: 9/13;
+}
+
+@media (max-width: 768px) {
+  .shopItems .spre_achitare {
+    -ms-grid-column: 8;
+    -ms-grid-column-span: 5;
+    grid-column: 8/13;
+  }
+}
+
+@media (max-width: 768px) and (max-width: 576px) {
+  .shopItems .spre_achitare {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1/13;
+  }
+}
+
+.shopItems .spre_achitare hr {
+  margin-bottom: 30px;
+}
+
+.shopItems .spre_achitare .spre_achitare_counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.shopItems .spre_achitare .spre_achitare_counter h3 {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+@media (max-width: 576px) {
+  .shopItems .spre_achitare .spre_achitare_counter h3 {
+    font-size: 14px;
+  }
+}
+/*# sourceMappingURL=shoping.css.map */
