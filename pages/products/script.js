@@ -1,21 +1,10 @@
-
-let shopIcon = document.querySelectorAll("#shop_icon");
-let wishList = document.querySelectorAll("#wishlist");
-
-let pages = document.querySelectorAll("#pages");
-
-
-
-
-// products
-
- let products = [
+let products = [
     {
         title: "Colier",
         description: "Lore ipsum",
         price: 10,
         img: "https://aureola-lombard.md/products/images/product-1-276.jpg",
-        filter: "bijuterii",
+        filter: "inel",
         inCard: 0,
         id: 1
     },
@@ -24,7 +13,7 @@ let pages = document.querySelectorAll("#pages");
         description: "Lore ipsum",
         price: 70,
         img: "https://www.aureola-lombard.md/products/images/product-4-256.jpg",
-        filter: "bijuterii",
+        filter: "inel",
         inCard: 0,
         id: 2
     },
@@ -33,7 +22,7 @@ let pages = document.querySelectorAll("#pages");
         description: "Lore ipsum",
         price: 60,
         img: "https://www.bijuteriastil.ro/files/cache/product/inel-aur-roz-18k-diamante-safir-roz-HO1198-cc-400x400.png",
-        filter: "bijuterii",
+        filter: "lant",
         inCard: 0,
         id: 3
     },
@@ -42,7 +31,7 @@ let pages = document.querySelectorAll("#pages");
         description: "Lore ipsum",
         price: 30,
         img: "https://www.tezaurshop.ro/assets/produse/491024-0.png",
-        filter: "bijuterii",
+        filter: "cercei",
         inCard: 0,
         id: 4
     },
@@ -51,11 +40,132 @@ let pages = document.querySelectorAll("#pages");
         description: "Lore ipsum",
         price: 40,
         img: "https://s.cdnmpro.com/125081904/custom/cat/cat_thumb_56.png",
-        filter: "bijuterii",
+        filter: "cercei",
         inCard: 0,
         id: 5
     }
 ]
+
+
+
+window.onload = () =>{
+    localStorage.setItem("products", JSON.stringify(products))
+}
+
+
+let elementCreateProducts = document.querySelector(".produscts_inside_filters");
+
+
+
+const productsElement = () =>{
+    let productsStorege = JSON.parse(localStorage.getItem("products"));
+
+    console.log(productsStorege)
+
+    Object.values(productsStorege).map(item =>{
+
+        elementCreateProducts.innerHTML += `
+        <div class="products">
+        <a id="pages" href="../pageProduct/pages.html">
+              <div class="img_description">
+                     <div class="img">                 
+                       <img class='img' src=${item.img} alt="Sfredel"  />
+                     </div>
+                      <h3 class='description_products'>
+                          <p>${item.description}</p>
+                      </h3>
+              </div>
+
+      </a>
+
+
+
+
+          <div class="element_bottom_prodicts">
+
+                  <div class="price">
+                          <h2>${item.price} lei</h2>
+                  </div>
+
+                  
+
+                 
+                  <div  class="buy_wishList">
+                     <ul class='buy_wishList_ul'>
+                      <li id="shop_icon"><img src="../../assets/icons/shop.png" alt="" srcset=""></li>
+                      <li id="wishlist" ><img src="../../assets/icons/Vector.png" alt="" srcset=""></li>
+                     </ul>
+
+                  </div>
+
+
+                 
+                  
+          </div>
+     </div>
+        `
+    })
+
+}
+
+
+productsElement();
+
+let shopIcon = document.querySelectorAll("#shop_icon");
+let wishList = document.querySelectorAll("#wishlist");
+
+let categoryElement = document.querySelector(".category");
+let category = Array.from(categoryElement.children);
+
+
+for(let i = 0; i < category.length; i++){
+
+    category[i].addEventListener("click", (e) =>{
+        var value = e.target.value;
+
+        console.log(value)
+    
+        let filter;
+    
+    
+        for(let i = 0; i < products.length; i++){
+    
+            if(products[i].filter == value){
+    
+                filter = {
+                    ...filter,
+                    [products[i].id]: products[i]
+    
+                }
+                
+            }
+            
+        }
+    
+        localStorage.setItem("products", JSON.stringify(filter))
+    
+        console.log(filter)
+    })
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let pages = document.querySelectorAll("#pages");
+
+
+// products
+
 
 
 for(let i = 0; i < pages.length; i++){
@@ -94,11 +204,9 @@ function cardItems(product){
 function setItems(products){
     let productsShop = JSON.parse(localStorage.getItem("shop"));
 
+    console.log("Produse",productsShop)
+
     if(productsShop != null){
-
-
-        
-        
 
             let card = {
                 ...productsShop,
@@ -113,7 +221,8 @@ function setItems(products){
             localStorage.setItem("shop", JSON.stringify(card))
 
         
-    }else{
+    }
+   else{
         
         let card = {
             [products.id]: products

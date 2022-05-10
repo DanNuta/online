@@ -1,6 +1,45 @@
 let titleShop = document.getElementById("title_shop")
 let total = document.getElementById("total");
 
+
+
+
+
+
+function removeShop(idE){
+    let shopArray = JSON.parse(localStorage.getItem("shop"));
+    let totalPrice = JSON.parse(localStorage.getItem("totalPrice"));
+
+    console.log(shopArray)
+
+
+    let card;
+    for(let i in shopArray){
+
+        if(i == idE){
+            totalPrice = totalPrice - shopArray[i].price
+
+        }else{
+            card = {
+                ...card,
+                [shopArray[i].id]: shopArray[i]
+            }
+        }
+    }
+
+    console.log("Card", card)
+    localStorage.setItem("shop", JSON.stringify(card))
+    localStorage.setItem("totalPrice", JSON.stringify(totalPrice))
+    localStorage.removeItem("shop");
+}
+
+
+
+
+
+
+
+
 function displayTotalPrice(){
     let totalPrice = JSON.parse(localStorage.getItem("totalPrice"));
 
@@ -18,6 +57,8 @@ displayTotalPrice();
 
 function getElementShop(){
     let shop = JSON.parse(localStorage.getItem("shop"));
+
+    console.log(shop)
     
     if(shop != null){
 
@@ -95,29 +136,7 @@ function getElementShop(){
 }
 
 
-function removeShop(idE){
-    let shopArray = JSON.parse(localStorage.getItem("shop"));
-    let totalPrice = JSON.parse(localStorage.getItem("totalPrice"));
 
-
-    let card;
-    for(let i in shopArray){
-
-        if(i == idE){
-            totalPrice = totalPrice - shopArray[i].price
-
-        }else{
-            card = {
-                ...card,
-                [shopArray[i].id]: shopArray[i]
-            }
-        }
-    }
-
-    console.log("Card", card)
-    localStorage.setItem("shop", JSON.stringify(card))
-    localStorage.setItem("totalPrice", JSON.stringify(totalPrice))
-}
 
 
 
