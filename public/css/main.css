@@ -397,6 +397,7 @@ footer .footer_div .footer_text .created {
   display: grid;
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
 }
 
 .header {

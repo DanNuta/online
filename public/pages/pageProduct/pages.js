@@ -2,6 +2,16 @@ let pages = document.getElementById("pages");
 
 
 
+let arrowUp = document.querySelector(".arrow_up");
+
+arrowUp.addEventListener("click", () =>{
+
+    document.body.scrollIntoView({
+      behavior: "smooth",
+    });
+    
+  })
+
 function showPages(){
     let localPage = JSON.parse(localStorage.getItem("pages"));
 
@@ -69,7 +79,9 @@ function showPages(){
             </div>
 
 
+            <hr/>
             <div class="add_to_cart">
+
 
             
                 <li id="shop_icon"><img src="../../assets/icons/shop.png" alt="" srcset=""></li>

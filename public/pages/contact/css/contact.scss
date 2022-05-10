@@ -241,6 +241,8 @@
                     align-content: center;
                     position: relative;
                     top: -180px;
+                    display: flex;
+                    align-items: center;
 
                     @include desktopExtraExtraLarge{
                         top: -107px;

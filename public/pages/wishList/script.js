@@ -5,6 +5,15 @@ let addCard = document.getElementById("add_card");
 
 
 
+let arrowUp = document.querySelector(".arrow_up");
+
+arrowUp.addEventListener("click", () =>{
+
+    document.body.scrollIntoView({
+      behavior: "smooth",
+    });
+    
+  })
 
 function pagesShow(id){
     let wish = JSON.parse(localStorage.getItem("wishlist"));
