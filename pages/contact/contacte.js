@@ -24,15 +24,15 @@ let nume = document.getElementById("nume"),
       }
       else if(email.value == ""){
           
-          nume.style.backgroundColor = "rgba(39, 39, 39, 0.1)"
+          nume.style.backgroundColor = "transparent"
           email.style.backgroundColor = "rgba(237, 12, 12, 0.1)"
           numeSpan.style.display = "none"
           emailSpan.style.display = "block"
           return
       }
       else if(telefon.value == "" || telefon.value.length != 9 ){
-            nume.style.backgroundColor = "rgba(39, 39, 39, 0.1)"
-            email.style.backgroundColor = "rgba(39, 39, 39, 0.1)"
+            nume.style.backgroundColor = "transparent"
+            email.style.backgroundColor = "transparent"
             telefon.style.backgroundColor = "rgba(237, 12, 12, 0.1)"
 
             numeSpan.style.display = "none"
@@ -41,9 +41,9 @@ let nume = document.getElementById("nume"),
           return
       }
       else if(message.value == ""){
-        nume.style.backgroundColor = "rgba(39, 39, 39, 0.1)"
-        email.style.backgroundColor = "rgba(39, 39, 39, 0.1)"
-        telefon.style.backgroundColor = "rgba(39, 39, 39, 0.1"
+        nume.style.backgroundColor = "transparent"
+        email.style.backgroundColor = "transparent"
+        telefon.style.backgroundColor = "transparent"
         message.style.backgroundColor = "rgba(237, 12, 12, 0.1)"
 
         numeSpan.style.display = "none"
@@ -53,10 +53,10 @@ let nume = document.getElementById("nume"),
           return
       }
 
-        nume.style.backgroundColor = "rgba(39, 39, 39, 0.1)"
-        email.style.backgroundColor = "rgba(39, 39, 39, 0.1)"
-        telefon.style.backgroundColor = "rgba(39, 39, 39, 0.1"
-        message.style.backgroundColor = "rgba(39, 39, 39, 0.1)"
+        nume.style.backgroundColor = "transparent"
+        email.style.backgroundColor = "transparent"
+        telefon.style.backgroundColor = "transparent"
+        message.style.backgroundColor = "transparent"
 
         numeSpan.style.display = "none"
         emailSpan.style.display = "none"
