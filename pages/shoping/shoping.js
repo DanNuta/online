@@ -1,7 +1,15 @@
 let titleShop = document.getElementById("title_shop")
 let total = document.getElementById("total");
 
+let arrowUp = document.querySelector(".arrow_up");
 
+arrowUp.addEventListener("click", () =>{
+
+    document.body.scrollIntoView({
+      behavior: "smooth",
+    });
+    
+  })
 
 
 
@@ -141,11 +149,15 @@ function getElementShop(){
 
 
 function increade(id){
-    let element = JSON.parse(localStorage.getItem("shop"))
+    let element = JSON.parse(localStorage.getItem("shop"));
+    let totalPrice = JSON.parse(localStorage.getItem("totalPrice"));
 
      element[id].inCard ++;
 
+     
+
      localStorage.setItem("shop", JSON.stringify(element))
+     localStorage.setItem("totalPrice", JSON.stringify(totalPrice + element[id].price ++))
  
 }
 

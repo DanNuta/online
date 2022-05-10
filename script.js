@@ -3,6 +3,16 @@ let slide = Array.from(slider.children);
 let btnRight = document.getElementById("btn_right");
 let btnLeft = document.getElementById("btn_left");
 
+let arrowUp = document.querySelector(".arrow_up");
+
+arrowUp.addEventListener("click", () =>{
+
+    document.body.scrollIntoView({
+      behavior: "smooth",
+    });
+    
+  })
+
 const slideWidth = slide[0].getBoundingClientRect().width;
 
 
@@ -86,6 +96,10 @@ let products = [
     }
 ]
 
+
+window.onload = () =>{
+    localStorage.setItem("products", JSON.stringify(products))
+}
 
 
 

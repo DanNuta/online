@@ -28,6 +28,7 @@ $color_seconds: #FFC0CB;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
 }
 
 @mixin btn($bg, $text_color){

@@ -6,7 +6,8 @@ let nume = document.getElementById("nume"),
     numeSpan = document.querySelector(".nume_span"),
     emailSpan = document.querySelector(".email_span"),
     telSpan = document.querySelector(".tel_span"),
-    mesageSpan = document.querySelector(".mesaj_span");
+    mesageSpan = document.querySelector(".mesaj_span"),
+    arrowUp = document.querySelector(".arrow_up");
 
 
   btnSubmit.addEventListener("click", (e) =>{
@@ -76,4 +77,14 @@ let nume = document.getElementById("nume"),
       message.value = ""
 
       console.log(obj)
+  })
+
+
+
+  arrowUp.addEventListener("click", () =>{
+
+    document.body.scrollIntoView({
+      behavior: "smooth",
+    });
+    
   })

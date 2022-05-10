@@ -47,10 +47,18 @@ let products = [
 ]
 
 
+let arrowUp = document.querySelector(".arrow_up");
 
-window.onload = () =>{
-    localStorage.setItem("products", JSON.stringify(products))
-}
+arrowUp.addEventListener("click", () =>{
+
+    document.body.scrollIntoView({
+      behavior: "smooth",
+    });
+    
+  })
+
+
+
 
 
 let elementCreateProducts = document.querySelector(".produscts_inside_filters");
@@ -290,9 +298,5 @@ function wishListProducts(product){
        
         localStorage.setItem("wishlist", JSON.stringify(card))
     }
-
-
-
-    console.log(products)
 
 }
