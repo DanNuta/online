@@ -1,0 +1,20 @@
+
+
+ .mobile_burger{
+    width: 200px;
+    height: 300px;
+    background-color: red;
+
+    ul{
+        display: block;
+
+        li{
+            background-color: red;
+        }
+    }
+}
+
+
+.active_nav{
+    display: none;
+}

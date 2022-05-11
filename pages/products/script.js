@@ -49,16 +49,13 @@ let products = [
 
 let burgerNavbar = document.querySelector(".li");
 
-
-console.log(burgerNavbar)
-
 burgerNavbar.addEventListener("click", () =>{
-    let mobileElement = document.querySelector(".mobile_elements");
+    let mobile = document.querySelector("mobile_burger");
 
-    mobileElement.classList.toggle("mobile_burger");
+    mobile.classList.toggle("active_nav")
 
-
-    console.log("click")
+    
+    
 })
 
 
