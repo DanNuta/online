@@ -1,265 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Document</title>
-</head>
-<body>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
 
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.8.1/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.8.1/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.8.1/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.8.1/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.8.1/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.8.1/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.8.1/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.8.1/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.8.1/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.8.1/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-
-    <header class="header">
-
-                     <div  class="mobile_elements">
-
-                      <ul class="mobile_logo">
-                              <li><a href="/"><img src="assets/logo.png" alt="Logo"/></a></li>
-                      </ul>
-
-                      <ul class='bars_shop'>
-                              <li class='li'><img src="assets/menu.png"  /></li>
-                              <li>9:00 AM - 19:00 PM</li>
-                              <li><a href="/shop"><img src="assets/card_shop.png" alt="shop" /></a></li>
-                      </ul>
-                      </div>
-
-
-
-
-
-                      <nav class="nav_bar">
-                      
-
-
-
-                      <ul class="logo">
-                      <li><a href="/"><img src="assets/logo.png" alt="Logo"/></a></li>
-                      <li>9:00-19:00</li>
-                      </ul>
-
-                      <div  class="cancel">
-                      <img src= />
-                      </div>
-
-                      <ul  class="nav_bar_links">
-                            <li><a class="links-a"  href="/">Despre</a></li>
-                            <li><a class="links-a"  href="pages/products/products.html">Produse</a></li>
-                            <li><a class="links-a"  href="pages/contact/contact.html">Contacte</a></li>
-                            <li><a class="links-a"  href="../../pages/contact/contact.html">Auth</a></li>
-
-                      </ul>
-
-                      <ul class="nav_bar_icons">
-                          <li><a href="pages/shoping/shoping.html"><img src="assets/card_shop.png" alt="shop" /></a></li>
-                          <li class="wishList"><a href="pages/wishList/wishList.html"><img src="assets/wishList.png" alt="wishList" /></a></li>
-                      </ul>
-
-                     
-
-
-
-                    
-                      </nav>
-</header>
-
-
-
-
-
-
-
-
-
-
-<div class="section_home">
-
-
-    <div class="text_element_left">
-        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur iste reiciendis nesciunt expedita quam placeat perferendis nemo, eius repudiandae aut numquam sapiente sunt dolor doloribus dignissimos voluptatibus labore cupiditate officia!</p>
-        <button class="btn_contact"><a href="./pages/contact/contact.html">Contact</a></button>
-
-        <div class="indicator">
-            <button id="btn_left" class="left"><img src="assets/icons/arrow_left.png" alt="" srcset=""></button>
-            <button id="btn_right" class="right"><img src="assets/icons/arrow_right.png" alt=""></button>
-        </div>
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="message">
+      <h2>Welcome</h2>
+      <h1>Firebase Hosting Setup Complete</h1>
+      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
+      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
     </div>
-
-
-
-    <div class="photo_images_right">
-        <ul id="slider_tracker">
-            <li class="curent_slide"><img src="./assets/header/1.jpg" alt=""></li>
-            <li><img src="./assets/header/2.jpg" alt=""></li>
-            <li><img src="./assets/header/3.jpg" alt=""></li>
-            <li><img src="./assets/header/4.jpg" alt=""></li>
-            <li><img src="./assets/header/5.jpg" alt=""></li>
-
-        </ul>
-    </div>
-
-
-</div>
-
-
-
-
-
-
-
-
-<div class="section_element_hover">
-
-    <h2 class="title">Bijuterii</h2>
-
-
-    <div class="element">
-
-      <div class="images_element">
-        <img src="https://aureola-lombard.md/products/images/product-1-276.jpg" alt="">
-      </div>
-
-       <div class="hover_element">
-           <img src="https://aureola-lombard.md/products/images/product-1-276.jpg" alt="">
-
-           <ul>
-              <a onclick="showPage()" href="./pages/pageProduct/pages.html"><li><img src="./assets/icons/search.png" alt=""></li></a>
-              <li onclick="addToWishlist()"><img src="./assets//icons/heard.png" alt=""></li>
-           </ul>
-       </div>
-    </div>
-
-
-
-
-    <div class="element">
-
-        <div class="images_element">
-          <img src="https://www.aureola-lombard.md/products/images/product-4-256.jpg" alt="">
-        </div>
-
-         <div class="hover_element">
-             <img src="https://www.aureola-lombard.md/products/images/product-4-256.jpg" alt="">
-
-             <ul>
-                <a onclick="showPage1()" href="./pages/pageProduct/pages.html"><li><img src="./assets/icons/search.png" alt=""></li></a>
-                <li onclick="addToWishlist1()"><img src="./assets//icons/heard.png" alt=""></li>
-             </ul>
-         </div>
-      </div>
-
-
-
-      <div class="element">
-
-        <div class="images_element">
-          <img src="https://www.bijuteriastil.ro/files/cache/product/inel-aur-roz-18k-diamante-safir-roz-HO1198-cc-400x400.png" alt="">
-        </div>
-
-         <div class="hover_element">
-             <img src="https://www.bijuteriastil.ro/files/cache/product/inel-aur-roz-18k-diamante-safir-roz-HO1198-cc-400x400.png" alt="">
-
-             <ul>
-                <a onclick="showPage2()" href="./pages/pageProduct/pages.html"><li><img src="./assets/icons/search.png" alt=""></li></a>
-                <li onclick="addToWishlist2()"><img src="./assets//icons/heard.png" alt=""></li>
-             </ul>
-         </div>
-      </div>
-
-
-      
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<footer>
-    <div class="footer_div center">
-
-        <div class="left_footer">
-            <ul>
-                <li><a href="/"><img src="assets/logo.png" alt="" /></a></li>
-                <li>Program: 9:00 AM - 19:00 PM</li>
-                <li><a href=""><span><img src="assets/phone.png"/></span>060653722</a></li>
-                <li><span><img src="assets/adress.png"/></span>Strada Marta 22A Iasi, Romania</li>
-                <li><span><img src="assets/mail.png"/></span>dany.condurari@gmail.com</li>
-            </ul>
-        </div>
-
-
-        <div class="right_footer">
-
-            <nav class='nav_footer'>
-                <ul class="links_active">
-                    <li><a   class="links" href="/">Despre</a></li>
-                    <li><a  class="links" href="pages/products/products.html">Produse</a></li>
-                    <li><a  class="links" href="pages/contact/contact.html">Contacte</a></li>
-                </ul>
-               
-
-
-                <ul class="links_icon">
-                    <li><a href="https://www.facebook.com/"  target="_blank" ><img src="assets/facebook.svg" alt="" /></a></li>
-                    <li><a href="https://www.youtube.com/" target="_blank"><img src="assets/youtube_img.svg" alt="" /></a></li>
-                </ul>
-            </nav>
-
-
-            <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2712.4210187665963!2d27.592826115414613!3d47.16919287915809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cafb7f92ce0003%3A0x3a77ac5cf5817840!2zU3RyYWRhIE1hcnRhLCBJYciZaSwgUm9tw6JuaWE!5e0!3m2!1sro!2s!4v1649497158180!5m2!1sro!2s"></iframe>                        </div>
-
-
-            
-
-        </div>
-
-
-        <div class="arrow_right">
-                <img class="arrow_up" src="assets/arrow.png"  />
-        </div>
-
-
-
-            <div class="footer_text">
-                <p>© All rights reserved</p>
-            </div>
-
-    </div>
-
-</footer>
-
-
-
-
-
-
-
-
-
-
-    <script src="script.js"></script>
-
-
-
-
-
-    
-</body>
+    <p id="load">Firebase SDK Loading&hellip;</p>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
 </html>
