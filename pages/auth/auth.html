@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="css/auth.css">
 
     <title>Document</title>
 </head>
@@ -54,8 +55,8 @@
                       </ul>
 
                       <ul class="nav_bar_icons">
-                          <li><a href="pages/shoping/shoping.html"><img src="../../assets/card_shop.png" alt="shop" /></a></li>
-                          <li class="wishList"><a href="pages/wishList/wishList.html"><img src="../../assets/wishList.png" alt="wishList" /></a></li>
+                          <li><a href="../shoping/shoping.html"><img src="../../assets/card_shop.png" alt="shop" /></a></li>
+                          <li class="wishList"><a href="../wishList/wishList.html"><img src="../../assets/wishList.png" alt="wishList" /></a></li>
                       </ul>
 
                      
@@ -76,10 +77,36 @@
 
 
 
-<form>
-    <input class="nume" type="text" placeholder="Nume">
-    <input  class="password" type="password" placeholder="password">
-    <input class="email" type="email" placeholder="Email">
+<form  onsubmit="submit()" class="form">
+
+    <h1>Create a acount</h1>
+    <div class="element nume">
+        <label for="nume">Nume</label>
+        <input class="nume_item" type="text" placeholder="Nume" id="nume">
+        <span class="nume_firebase">Introdu un nume</span>
+    </div>
+
+
+    <div class="element email">
+        <label for="email">Email</label>
+        <input  class="email_item" type="email" placeholder="email" id="email">
+        <span class="email_firebase"></span>
+    </div>
+
+
+    <div class="element password">
+        <label for="password">Password</label>
+        <input  class="password_item" type="password" placeholder="Password" id="password">
+        <span class="password_firebase"></span>
+    </div>
+
+
+    <div class="element file">
+        <label for="file">File</label>
+        <input  class="file_element" type="file">
+        <span class="file_firebase"></span>
+    </div>
+
     <button class="btn_submit">Create acount</button>
 
     <p class="error"></p>

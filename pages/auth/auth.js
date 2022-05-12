@@ -1,6 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
 import {getAuth, createUserWithEmailAndPassword, updateProfile} from "https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js"
 import {getFirestore, collection, addDoc} from "https://www.gstatic.com/firebasejs/9.8.1/firebase-firestore.js"
+import {getStorage, ref } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-storage.js";
 
 
 
@@ -18,34 +19,58 @@ const firebaseConfig = {
 
   const auth = getAuth(app);
   const db = getFirestore(app);
+  const storage = getStorage(app);
 
 
   let btn = document.querySelector(".btn_submit");
   let error = document.querySelector(".error");
-  let email = document.querySelector(".email");
-  let password = document.querySelector(".password");
-  let nume = document.querySelector(".nume");
+  let email = document.querySelector(".email_item");
+  let password = document.querySelector(".password_item");
+  let nume = document.querySelector(".nume_item");
+  let spanName = document.querySelector(".nume_firebase");
+  let form = document.querySelector(".form")
 
-  btn.addEventListener("click", async (e) =>{
-      e.preventDefault();
+   const submit  =  (e) =>{
+       e.preventDefault();
 
-     
+    if (nume.value == ""){
+        spanName.style.display = "block"
+       
+      }
+      
+       authentification(email.value, password.value, nume.value);
+       collectionElement();
+       storageAuth()
+ 
+ 
+       nume.value = ""
+       password.value = "";
+       email.value = ""
 
-      authentification(email.value, password.value, nume.value)
-      collectionElement()
+}
 
 
-      nume.value = ""
-      password.value = "";
-      email.value = ""
-     
-     
+submit()
 
-  })
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 //   AJAX
+
+
+
+// auth
 
 async function authentification(email, password, nume){
   try{
@@ -67,7 +92,7 @@ async function authentification(email, password, nume){
   }
 }
 
-
+// db
 async function collectionElement(){
     let user = JSON.parse(localStorage.getItem("user"));
 
@@ -82,13 +107,27 @@ async function collectionElement(){
         const docRef = await addDoc(collection(db, "users"), userCollection);
 
 
-        console.log(user)
-
     }catch(e){
         console.log(e.message)
 
     }
 
+}
+
+
+// storage
+
+async function storageAuth(){
+    let user = JSON.parse(localStorage.getItem("user"));
+
+    try{
+        const refStorage = await ref(storage, `${file.name}`)
+
+    }catch(e){
+
+        console.log(e.message)
+
+    }
 }
 
 

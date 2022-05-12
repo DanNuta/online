@@ -1,0 +1,70 @@
+.center{
+    margin-top: 115px;
+
+   
+
+}
+
+
+form{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 115px auto 0 auto;
+    align-items: flex-start;
+
+
+    
+    
+
+    h1{
+        grid-column: 1/13
+    }
+
+
+    .nume{
+        grid-column: 1/13;
+
+        .nume_firebase{
+            display: none;
+        }
+       
+    }
+
+
+    .email{
+        grid-column: 1/13;
+        
+    }
+
+    .password{
+        grid-column: 1/13;
+    }
+
+    .file{
+        grid-column: 1/13;
+    }
+
+
+    .element{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+
+        input{
+            outline: none;
+            border: 1px solid black;
+            height: 35px;
+            margin-top: 15px;
+        }
+    }
+
+
+
+    .btn_submit{
+        margin-top: 15px;
+    }
+}
