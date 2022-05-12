@@ -1,3 +1,8 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 .center {
   margin-top: 115px;
 }
@@ -20,60 +25,25 @@ form {
           align-items: flex-start;
 }
 
-form h1 {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 12;
-  grid-column: 1/13;
-}
-
-form .nume {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 12;
-  grid-column: 1/13;
-}
-
-form .nume .nume_firebase {
-  display: none;
-}
-
-form .email {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 12;
-  grid-column: 1/13;
-}
-
-form .password {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 12;
-  grid-column: 1/13;
-}
-
-form .file {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 12;
-  grid-column: 1/13;
-}
-
-form .element {
-  margin-top: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
-}
-
-form .element input {
+form input {
   outline: none;
   border: 1px solid black;
   height: 35px;
   margin-top: 15px;
+  width: 100%;
+}
+
+form span {
+  display: none;
+  color: red;
 }
 
 form .btn_submit {
   margin-top: 15px;
+  border: none;
+  background-color: pink;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
 }
 /*# sourceMappingURL=auth.css.map */

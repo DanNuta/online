@@ -1,7 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
 import {getAuth, createUserWithEmailAndPassword, updateProfile} from "https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js"
 import {getFirestore, collection, addDoc} from "https://www.gstatic.com/firebasejs/9.8.1/firebase-firestore.js"
-import {getStorage, ref } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-storage.js";
 
 
 
@@ -19,41 +18,52 @@ const firebaseConfig = {
 
   const auth = getAuth(app);
   const db = getFirestore(app);
-  const storage = getStorage(app);
+  
+  let arrowUp = document.querySelector(".arrow_up");
 
+  arrowUp.addEventListener("click", () =>{
+  
+      document.body.scrollIntoView({
+        behavior: "smooth",
+      });
+      
+    })
 
   let btn = document.querySelector(".btn_submit");
   let error = document.querySelector(".error");
-  let email = document.querySelector(".email_item");
-  let password = document.querySelector(".password_item");
-  let nume = document.querySelector(".nume_item");
+  let email = document.querySelector(".email");
+  let password = document.querySelector(".password");
+  let nume = document.querySelector(".nume");
   let spanName = document.querySelector(".nume_firebase");
-  let form = document.querySelector(".nume span");
+  let form = document.querySelector("form");
 
- 
-   function submit(e){
-    e.preventDefault();
 
-       console.log("click")
+  form.addEventListener("submit", (e) =>{
+      e.preventDefault();
 
-    if (nume.value == ""){
-        spanName.style.display = "block"
-       
+      if(nume.value == ""){
+          spanName.style.display = "block"
+          return;
       }
-      
-       authentification(email.value, password.value, nume.value);
+
+      spanName.style.display = "none"
+
+
+      authentification(email.value, password.value, nume.value);
        collectionElement();
-       storageAuth()
+      
  
  
        nume.value = ""
        password.value = "";
        email.value = ""
 
-}
+  })
+ 
+   
 
 
-submit()
+
 
 
 
@@ -118,20 +128,7 @@ async function collectionElement(){
 }
 
 
-// storage
 
-async function storageAuth(){
-    let user = JSON.parse(localStorage.getItem("user"));
-
-    try{
-        const refStorage = await ref(storage, `${file.name}`)
-
-    }catch(e){
-
-        console.log(e.message)
-
-    }
-}
 
 
   
