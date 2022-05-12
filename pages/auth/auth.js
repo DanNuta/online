@@ -28,10 +28,13 @@ const firebaseConfig = {
   let password = document.querySelector(".password_item");
   let nume = document.querySelector(".nume_item");
   let spanName = document.querySelector(".nume_firebase");
-  let form = document.querySelector(".form")
+  let form = document.querySelector(".nume span");
 
-   const submit  =  (e) =>{
-       e.preventDefault();
+ 
+   function submit(e){
+    e.preventDefault();
+
+       console.log("click")
 
     if (nume.value == ""){
         spanName.style.display = "block"
