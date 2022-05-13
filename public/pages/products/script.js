@@ -3,7 +3,7 @@ let products = [
         title: "Colier",
         description: "Lore ipsum",
         price: 10,
-        img: "https://aureola-lombard.md/products/images/product-1-276.jpg",
+        img: "../../assets/header/bututerii3.png",
         filter: "inel",
         inCard: 0,
         id: 1
@@ -12,16 +12,16 @@ let products = [
         title: "Colier",
         description: "Lore ipsum",
         price: 70,
-        img: "https://www.aureola-lombard.md/products/images/product-4-256.jpg",
+        img: "../../assets/header/bututerii3.png",
         filter: "inel",
         inCard: 0,
         id: 2
     },
     {
-        title: "Inel",
+        title: "Lant",
         description: "Lore ipsum",
         price: 60,
-        img: "https://www.bijuteriastil.ro/files/cache/product/inel-aur-roz-18k-diamante-safir-roz-HO1198-cc-400x400.png",
+        img: "../../assets/header/bututerii2.png",
         filter: "lant",
         inCard: 0,
         id: 3
@@ -30,7 +30,7 @@ let products = [
         title: "Tapca",
         description: "Lore ipsum",
         price: 30,
-        img: "https://www.tezaurshop.ro/assets/produse/491024-0.png",
+        img: "../../assets/header/bututerii1.png",
         filter: "cercei",
         inCard: 0,
         id: 4
@@ -39,12 +39,24 @@ let products = [
         title: "Agrafa",
         description: "Lore ipsum",
         price: 40,
-        img: "https://s.cdnmpro.com/125081904/custom/cat/cat_thumb_56.png",
+        img: "../../assets/header/bututerii1.png",
         filter: "cercei",
         inCard: 0,
         id: 5
     }
 ]
+
+
+let burgerNavbar = document.querySelector(".li");
+
+burgerNavbar.addEventListener("click", () =>{
+    let mobile = document.querySelector("mobile_burger");
+
+    mobile.classList.toggle("active_nav")
+
+    
+    
+})
 
 
 let arrowUp = document.querySelector(".arrow_up");
@@ -130,8 +142,8 @@ for(let i = 0; i < category.length; i++){
 
     category[i].addEventListener("click", (e) =>{
         var value = e.target.value;
-
-        console.log(value)
+    
+        console.log(e.target)
     
         let filter;
     
