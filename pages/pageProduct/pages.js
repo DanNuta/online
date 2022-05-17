@@ -97,9 +97,46 @@ function showPages(){
 
         </div>
 
-    `
-
-    
+    `  
 }
 
+
 showPages();
+
+let wishlist = document.querySelector("#wishlist");
+let shop = document.querySelector("#shop_icon")
+
+wishlist.addEventListener("click", () =>{
+    let wishStorage = JSON.parse(localStorage.getItem("wishlist"));
+    let objStorage = JSON.parse(localStorage.getItem("pages"));
+    let totalPriceStorage = JSON.parse(localStorage.getItem("totalPrice"));
+
+    let card = {
+        [objStorage.id]: objStorage,
+        ...wishStorage
+    }
+
+    card[objStorage.id].inCard += 1;
+
+    localStorage.setItem("wishlist", JSON.stringify(card))
+    localStorage.setItem("totalPrice", JSON.stringify(totalPriceStorage + objStorage.price))
+})
+
+
+
+shop.addEventListener("click", () =>{
+    let shopStorage = JSON.parse(localStorage.getItem("shop"));
+    let objStorage = JSON.parse(localStorage.getItem("pages"));
+    let totalPriceStorage = JSON.parse(localStorage.getItem("totalPrice"));
+
+    let card = {
+        [objStorage.id]: objStorage,
+        ...shopStorage
+    }
+
+    card[objStorage.id].inCard += 1;
+
+    localStorage.setItem("shop", JSON.stringify(card))
+    localStorage.setItem("totalPrice", JSON.stringify(totalPriceStorage + objStorage.price))
+
+})

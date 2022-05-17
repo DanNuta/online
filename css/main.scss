@@ -421,9 +421,17 @@ $color_seconds: #FFC0CB;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 
+    @include desktopExtraExtraLarge{
+        width: 90%;
+    }
+
 
     .text_element_left{
         grid-column: 1/5;
+
+        @include desktopExtraExtraLarge{
+            grid-column: 1/7;
+        }
 
         h1{
             font-family: 'Montserrat';
@@ -470,6 +478,12 @@ $color_seconds: #FFC0CB;
         position: relative;
         overflow: hidden;
         width: 800px;
+
+        @include desktopExtraExtraLarge{
+            grid-column: 7/13;
+        }
+
+        
        
 
         ul{

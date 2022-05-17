@@ -762,10 +762,24 @@ footer .footer_div .footer_text .created {
       grid-template-columns: repeat(12, 1fr);
 }
 
+@media (max-width: 1400px) {
+  .section_home {
+    width: 90%;
+  }
+}
+
 .section_home .text_element_left {
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-column: 1/5;
+}
+
+@media (max-width: 1400px) {
+  .section_home .text_element_left {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1/7;
+  }
 }
 
 .section_home .text_element_left h1 {
@@ -810,6 +824,14 @@ footer .footer_div .footer_text .created {
   position: relative;
   overflow: hidden;
   width: 800px;
+}
+
+@media (max-width: 1400px) {
+  .section_home .photo_images_right {
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 6;
+    grid-column: 7/13;
+  }
 }
 
 .section_home .photo_images_right ul {
